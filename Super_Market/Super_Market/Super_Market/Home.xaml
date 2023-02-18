@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Super_Market.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Super_Market"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1100">
+    <Viewbox>
+        <Border CornerRadius="35" Width="1000" Height="822" >
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="20" Opacity="0.4"></DropShadowEffect>
+            </Border.Effect>
+            <Border.Background>
+                <ImageBrush Stretch="Fill"
+                           
+                            ImageSource="/cover.jpg">
+
+                </ImageBrush>
+            </Border.Background>
+            <Grid Width="1100" Height="850">
+
+
+            </Grid>
+        </Border>
+    </Viewbox>
+</UserControl>

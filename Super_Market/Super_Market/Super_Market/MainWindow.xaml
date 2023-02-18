@@ -1,0 +1,112 @@
+﻿<Window x:Class="Super_Market.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:Super_Market"
+        mc:Ignorable="d"
+        Title="Admin" Height="600" Width="1000"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip"
+        >
+    <Window.Resources>
+      
+    </Window.Resources>
+
+    <Viewbox>
+        <Border CornerRadius="25" Padding="10"  Background="#FF5ABA9A">
+
+
+            <Grid Height="600" Width="1000">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.27*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Border CornerRadius="25" Background="White">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="1" BlurRadius="20" Opacity="0.4"></DropShadowEffect>
+                    </Border.Effect>
+                    <!--<Border.Background>
+                        <ImageBrush ImageSource="D:\ITI-Tasks\C#\Project\Super_Market\Super_Market\bac_2.jpg">
+                            
+                        </ImageBrush>
+                    </Border.Background>-->
+                    <StackPanel Margin="5" VerticalAlignment="Center" >
+<Border CornerRadius="25" Background="White" Margin="0 0 0 19">
+
+                            <TextBlock Padding="40 0 0 0" Foreground="#FF5ABA9A" FontWeight="Bold" FontSize="30" Width="210" ><Run Text="Admin"/></TextBlock>
+
+                        </Border>
+                        <ListView >
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15"  Selected="ListViewItem_Selected_5"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel  Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25"  Kind="Home" FontWeight="Bold"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold">Home</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15"  Selected="ListViewItem_Selected"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel  Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="Store" FontWeight="Bold"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold">Stores</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15" Selected="list_2_Selected"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="Group"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"> Categories</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15" Selected="ListViewItem_Selected_1"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="Reproduction"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"> Products</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15" Selected="ListViewItem_Selected_2"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="Salesforce"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"> Sales</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15" Selected="ListViewItem_Selected_3"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="ShoppingOutline"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"> Purchases</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="15" Selected="ListViewItem_Selected_4"  Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="MicrosoftSharepoint"></Icon:PackIconMaterial>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"> Reports</TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Foreground="#FF5ABA9A" Padding="10" Margin="0 10 0 0"   Selected="ListViewItem_Selected_6"  VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Icon:PackIconMaterial Kind="Logout" Width="30" Height="25"/>
+                                    <TextBlock Padding="8 0 0 0"  FontSize="18" FontWeight="Bold"><Run Text="Logout"/></TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                        </ListView>
+                    </StackPanel>
+                </Border>
+
+                <ContentControl Name="stores" Grid.Column="1">
+                    <Image Stretch="Fill" Source="/cover.jpg" Margin="10" Width="945" Height="798">
+                        <Image.Effect>
+                            <DropShadowEffect ShadowDepth="1" BlurRadius="20" Opacity="0.4"></DropShadowEffect>
+                        </Image.Effect>
+                    </Image>
+                </ContentControl>
+
+
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>
