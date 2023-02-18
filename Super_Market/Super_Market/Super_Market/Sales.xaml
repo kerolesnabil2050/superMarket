@@ -49,7 +49,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 70 0 0">
                     <Label FontSize="30">Date:</Label>
-                    <DatePicker  Width="250" FontSize="30" VerticalAlignment="Top" Background="#FF5ABA9A" Margin="80 15 0 0"></DatePicker>
+                    <TextBox Name="TxtData"  Width="250" FontSize="30" VerticalAlignment="Top" Background="#FF5ABA9A" Margin="80 15 0 0"></TextBox>
                 </StackPanel>
 
                 <Grid Grid.Row="1" Grid.ColumnSpan="2">
@@ -74,27 +74,23 @@
                     </StackPanel>
                     <StackPanel Grid.Column="1" >
                         <Label FontSize="30">Quantity:</Label>
-                        <TextBox HorizontalAlignment="Left" FontSize="30" Width="100" Background="#FF5ABA9A" ></TextBox>
+                        <TextBox Name="TxtQua" HorizontalAlignment="Left" FontSize="30" Width="100" Background="#FF5ABA9A" ></TextBox>
                     </StackPanel>
                     <StackPanel Grid.Column="2">
                         <Label FontSize="30"> Selling Price:</Label>
-                        <TextBox HorizontalAlignment="Left" FontSize="30" Width="200"  Background="#FF5ABA9A" ></TextBox>
-                    </StackPanel>
-                    <StackPanel Grid.Column="3">
-                        <Label FontSize="30">Purchasing Price:</Label>
-                        <TextBox HorizontalAlignment="Left" FontSize="30" Width="180" Background="#FF5ABA9A" ></TextBox>
+                        <TextBox Name="TxtSell" HorizontalAlignment="Left" FontSize="30" Width="200"  Background="#FF5ABA9A" ></TextBox>
                     </StackPanel>
                     <StackPanel Grid.Column="4">
                         <Label FontSize="30">Discount %:</Label>
-                        <TextBox HorizontalAlignment="Left" FontSize="30" Width="180" Background="#FF5ABA9A" ></TextBox>
+                        <TextBox Name="TxtDis" HorizontalAlignment="Left" FontSize="30" Width="180" Background="#FF5ABA9A" ></TextBox>
                     </StackPanel>
                 </Grid>
                 <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-                    <Button Width="150" Height="50" Margin="15" FontSize="28">Add</Button>
+                    <Button Width="150" Height="50" Margin="15" FontSize="28" Click="Button_Click">Add</Button>
                     <Button Width="150" Height="50" Margin="15" FontSize="28">Delete</Button>
                     <Button Width="150" Height="50" Margin="15" FontSize="28">Update</Button>
                 </StackPanel>
-                <DataGrid Grid.Row="2" Grid.ColumnSpan="2">
+                <DataGrid  Name="SalesDataGraid" Grid.Row="2" Grid.ColumnSpan="2" AutoGenerateColumns="False" IsReadOnly="True" FontSize="30">
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#FF5ABA9A"></Setter>
@@ -106,11 +102,10 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns >
-                        <DataGridTextColumn Header="Product" Width="280"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Quantity" Width="200"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Purchase Price" Width="250"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Total" Width="200"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Discount" ></DataGridTextColumn>
+                        <DataGridTextColumn x:Name="productname" Header="Product" Width="280" Binding="{Binding Path=Name}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Quantity" Width="200" Binding="{Binding Path=Quantity}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Total" Width="200" Binding="{Binding Path=Total}" ></DataGridTextColumn>
+                        <DataGridTextColumn Header="Discount"  Binding="{Binding Path=Discount}"></DataGridTextColumn>
 
                     </DataGrid.Columns>
                 </DataGrid>

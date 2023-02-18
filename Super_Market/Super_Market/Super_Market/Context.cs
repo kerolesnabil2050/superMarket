@@ -22,7 +22,7 @@ namespace Super_Market
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Data source=DESKTOP-TOJ495J\SQL19; initial catalog = SuperMarket;Integrated Security=True; trust server certificate = true");
+                .UseSqlServer(@"Data source=DESKTOP-NNJMDGE\SQL19; initial catalog = SuperMarket;Integrated Security=True; trust server certificate = true");
                 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

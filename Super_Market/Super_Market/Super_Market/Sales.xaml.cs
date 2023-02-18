@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +28,7 @@ namespace Super_Market
             InitializeComponent();
            combstor.ItemsSource = context.Stors.ToList();
         }
-
+        
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(comcat.SelectedItem != null)
@@ -48,10 +50,47 @@ namespace Super_Market
             var store = (Stor)combstor.SelectedItem;
             comcat.ItemsSource=context.Categorys.Where(e=>e.objstor.Id==store.Id).ToList();
 
+            combproduct.ItemsSource = "";
+
         }
 
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
+            if (combproduct.SelectedItem != null)
+            {
+                var product = (Proudect)combproduct.SelectedItem;
+                var proudects = context.proudcts.Where(p => p.Id ==product.Id ).FirstOrDefault();
+                TxtSell.Text = proudects.SellingPrice.ToString();
+                TxtQua.Text = "1";
+                TxtDis.Text = "0.0";
+
+            }
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var proudect = (Proudect)combproduct.SelectedItem;
+            var ProductName = proudect.Name;
+             var TotalPrice = int.Parse(TxtQua.Text) * int.Parse(TxtSell.Text);
+            double Dis = double.Parse(TxtDis.Text);
+            double discount;
+            if(Dis>0)
+            {
+             discount=(TotalPrice*Dis)/100;   
+            }
+            else
+            {
+                discount = 0;
+            }
+            var list = new[]
+               {
+                    new { Name =ProductName, Quantity = TxtQua.Text, 
+                                   Total=TotalPrice.ToString(),Discount=discount }
+             }.ToList();
+       
+            SalesDataGraid.Items.Add ( list);
+
 
         }
     }

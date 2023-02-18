@@ -3767,19 +3767,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AL LewaaCompany\\.nuget\\packages\\": {}
+    "C:\\Users\\keroles\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Super_Market\\Super_Market\\Super_Market.csproj",
+      "projectUniqueName": "C:\\Users\\keroles\\Downloads\\Video\\superMarket\\Super_Market\\Super_Market\\Super_Market\\Super_Market.csproj",
       "projectName": "Super_Market",
-      "projectPath": "G:\\Super_Market\\Super_Market\\Super_Market.csproj",
-      "packagesPath": "C:\\Users\\AL LewaaCompany\\.nuget\\packages\\",
-      "outputPath": "G:\\Super_Market\\Super_Market\\obj\\",
+      "projectPath": "C:\\Users\\keroles\\Downloads\\Video\\superMarket\\Super_Market\\Super_Market\\Super_Market\\Super_Market.csproj",
+      "packagesPath": "C:\\Users\\keroles\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\keroles\\Downloads\\Video\\superMarket\\Super_Market\\Super_Market\\Super_Market\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\AL LewaaCompany\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\keroles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3787,6 +3792,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "E:\\Package Source": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3851,7 +3857,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
